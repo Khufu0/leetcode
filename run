@@ -1,0 +1,72 @@
+#!/usr/bin/python3
+
+import subprocess
+import argparse
+from os import abort, path
+import signal
+
+
+def run(cmd: str) -> None:
+    try:
+        subprocess.run(cmd, shell=True, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"{str(e)}")
+        abort()
+
+
+def rm_extension(file: str) -> str:
+    if file.lower().endswith((".cpp", "cxx", "c++", ".cc")):
+        return path.splitext(file)[0]
+    else:
+        return file
+
+
+def signal_handler(sig, frame) -> None:
+    exit(1)
+
+
+# Register the signal handler
+signal.signal(signal.SIGINT, signal_handler)
+
+parser = argparse.ArgumentParser(prog="run")
+parser.add_argument(
+    "-t",
+    "--target",
+    default="",
+    help="target to build and execute",
+)
+parser.add_argument(
+    "-b",
+    "--benchmark",
+    action="store_true",
+    default=False,
+    help="time execution",
+)
+parser.add_argument(
+    "-r",
+    "--release",
+    action="store_true",
+    default=False,
+    help="release build",
+)
+parser.add_argument(
+    "-c",
+    "--clean",
+    action="store_true",
+    default=False,
+    help="build from scratch",
+)
+args = parser.parse_args()
+
+if args.clean and path.isdir("build/"):
+    run("rm build/ -rf")
+
+if path.isdir("build/") is False:
+    build_type = "Release" if args.release else "Debug"
+    run(f"cmake -B build/ -DCMAKE_BUILD_TYPE={build_type}")
+
+target = rm_extension(args.target) if args.target != "" else ""
+
+run(f"cmake --build build --parallel {f"-t {target}" if target != "" else ""}")
+if target != "":
+    run(f"{"time " if args.benchmark else ""}build/{target}")

@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(Study++ 
+        CXX
+)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wno-sign-compare")
+
+if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wnrvo")
+elseif(CMAKE_CXX_COMPILER_ID MATCHES Clang)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+  add_compile_definitions(_LIBCPP_ENABLE_EXPERIMENTAL)
+endif()
+
+include_directories(.)
+
+# Programming skills
+add_executable(difference389 difference389.cpp)
+add_executable(firstOccurrence28 firstOccurrence28.cpp)
+# Concurrency
+add_executable(fizzBuzz1195 fizzBuzz1195.cpp)
+add_executable(inOrder1114 inOrder1114.cpp)

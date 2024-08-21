@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "fizzBuzz1195",
+      "program": "${workspaceFolder}/build/fizzBuzz1195",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
