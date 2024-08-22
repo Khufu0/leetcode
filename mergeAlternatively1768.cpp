@@ -7,7 +7,7 @@ public:
   {
     std::string res;
     int i = 0;
-    for (i = 0; i < word1.length(); i++) {
+    for (; i < word1.length(); i++) {
       res += word1[i];
       if (i < word2.length())
         res += word2[i];
