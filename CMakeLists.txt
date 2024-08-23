@@ -26,6 +26,11 @@ add_executable(repeatedSubstring459 repeatedSubstring459.cpp)
 add_executable(moveZeros283 moveZeros283.cpp)
 add_executable(plusOne66 plusOne66.cpp)
 add_executable(sign1822 sign1822.cpp)
+add_executable(arithmeticProgression1502 arithmeticProgression1502.cpp)
+add_executable(monotonicArray896 monotonicArray896.cpp)
+add_executable(romanToInt13 romanToInt13.cpp)
+add_executable(lengthOfLastWord58 lengthOfLastWord58.cpp)
+add_executable(toLower709 toLower709.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)

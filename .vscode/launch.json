@@ -39,6 +39,22 @@
       "program": "${workspaceFolder}/build/zeroEvenOdd1116",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "arithmeticProgression1502",
+      "program": "${workspaceFolder}/build/arithmeticProgression1502",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "lengthOfLastWord58",
+      "program": "${workspaceFolder}/build/lengthOfLastWord58",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
