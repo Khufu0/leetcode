@@ -15,14 +15,13 @@ public:
   {
   }
 
-  template <typename Cond, typename Printer, typename... Args>
-    requires std::is_invocable_v<Cond> && std::is_invocable_v<Printer, Args...>
-  inline void print(Cond &&cond, Printer &&printer, Args &&...args)
+  template <typename Predicate, typename Printer, typename... Args>
+    requires std::is_invocable_v<Predicate> && std::is_invocable_v<Printer, Args...>
+  inline void print(Predicate &&pred, Printer &&printer, Args &&...args)
   {
     std::unique_lock lock(m_mutex);
     while (c <= n) {
-      while (cond())
-        m_cond.wait(lock);
+      m_cond.wait(lock, pred);
       if (c <= n) [[likely]] {
         printer(std::forward<Args>(args)...);
         c++;
@@ -33,25 +32,25 @@ public:
 
   void fizz(std::function<void()> printFizz)
   {
-    print([&] { return c <= n && !((c % 3 == 0) && (c % 5 != 0)); },
+    print([&] { return c > n || ((c % 3 == 0) && (c % 5 != 0)); },
           std::move(printFizz));
   }
 
   void buzz(std::function<void()> printBuzz)
   {
-    print([&] { return c <= n && !((c % 3 != 0) && (c % 5 == 0)); },
+    print([&] { return c > n || ((c % 3 != 0) && (c % 5 == 0)); },
           std::move(printBuzz));
   }
 
   void fizzbuzz(std::function<void()> printFizzBuzz)
   {
-    print([&] { return c <= n && !((c % 3 == 0) && (c % 5 == 0)); },
+    print([&] { return c > n || ((c % 3 == 0) && (c % 5 == 0)); },
           std::move(printFizzBuzz));
   }
 
   void number(std::function<void(int)> printNumber)
   {
-    print([&] { return c <= n && !((c % 3 != 0) && (c % 5 != 0)); },
+    print([&] { return c > n || ((c % 3 != 0) && (c % 5 != 0)); },
           std::move(printNumber), std::ref(c));
   }
 };

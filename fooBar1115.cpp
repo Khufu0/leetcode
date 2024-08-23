@@ -1,5 +1,6 @@
 #include <atomic>
 #include <functional>
+#include <iostream>
 #include <thread>
 
 // lock free
@@ -40,5 +41,15 @@ public:
 
 int main()
 {
+  FooBar s(4);
+
+  std::vector<std::thread> threads(2);
+  threads.at(0) = std::thread(&FooBar::foo, &s, [] { std::cout << "foo"; });
+  threads.at(1) =
+      std::thread(&FooBar::bar, &s, [] { std::cout << "bar" << std::endl; });
+
+  for (auto &t : threads) {
+    t.join();
+  }
   return 0;
 }
