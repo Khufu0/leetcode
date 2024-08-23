@@ -30,3 +30,5 @@ add_executable(sign1822 sign1822.cpp)
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)
 add_executable(inOrder1114 inOrder1114.cpp)
+add_executable(fooBar1115 fooBar1115.cpp)
+add_executable(zeroEvenOdd1116 zeroEvenOdd1116.cpp)
