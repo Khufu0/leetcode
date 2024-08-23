@@ -7,6 +7,30 @@
       "program": "${workspaceFolder}/build/fizzBuzz1195",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "repeatedSubstring459",
+      "program": "${workspaceFolder}/build/repeatedSubstring459",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "moveZeros283",
+      "program": "${workspaceFolder}/build/moveZeros283",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "plusOne66",
+      "program": "${workspaceFolder}/build/plusOne66",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

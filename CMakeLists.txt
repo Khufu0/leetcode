@@ -22,6 +22,11 @@ add_executable(mergeAlternatively1768 mergeAlternatively1768.cpp)
 add_executable(difference389 difference389.cpp)
 add_executable(firstOccurrence28 firstOccurrence28.cpp)
 add_executable(validAnagram242 validAnagram242.cpp)
+add_executable(repeatedSubstring459 repeatedSubstring459.cpp)
+add_executable(moveZeros283 moveZeros283.cpp)
+add_executable(plusOne66 plusOne66.cpp)
+add_executable(sign1822 sign1822.cpp)
+
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)
 add_executable(inOrder1114 inOrder1114.cpp)
