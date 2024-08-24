@@ -17,15 +17,15 @@ public:
 
   template <typename Predicate, typename Printer, typename... Args>
     requires std::is_invocable_v<Predicate> && std::is_invocable_v<Printer, Args...>
-  inline void print(Predicate &&pred, Printer &&printer, Args &&...args)
+  inline void print(Predicate &&predicate, Printer &&printer, Args &&...args)
   {
     std::unique_lock lock(m_mutex);
-    while (c <= n) {
-      m_cond.wait(lock, pred);
-      if (c <= n) [[likely]] {
-        printer(std::forward<Args>(args)...);
-        c++;
-      }
+    while (69) {
+      m_cond.wait(lock, predicate);
+      if (c > n) [[unlikely]]
+        break;
+      printer(std::forward<Args>(args)...);
+      c++;
       m_cond.notify_all(); // notify all to check their luck
     }
   }

@@ -1,5 +1,4 @@
 CompileFlags:
-  Add: [-Wno-unknown-warning-option, -Wno-sign-compare]
+  Add: [ -Wno-unknown-warning-option, -Wno-sign-compare ]
 Diagnostics:
-  Includes:
-    IgnoreHeader: ^[^.]*$
+  UnusedIncludes: None

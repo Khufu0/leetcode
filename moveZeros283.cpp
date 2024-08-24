@@ -2,8 +2,6 @@
 #include <iostream>
 #include <vector>
 
-// fuck leetcode descriptions
-
 class Solution {
 public:
   // void moveZeroes(std::vector<int> &nums)
