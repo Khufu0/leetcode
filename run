@@ -1,9 +1,42 @@
 #!/usr/bin/python3
 
+from enum import Enum
 import subprocess
 import argparse
 from os import abort, path
-import signal
+
+parser = argparse.ArgumentParser(prog="run")
+parser.add_argument(
+    "target",
+)
+# general args
+parser.add_argument(
+    "-b",
+    "--benchmark",
+    action="store_true",
+    default=False,
+    help="time execution",
+)
+# cmake specific args
+parser.add_argument(
+    "--release",
+    action="store_true",
+    default=False,
+    help="cmake release build",
+)
+parser.add_argument(
+    "-r",
+    "--reconfigure",
+    action="store_true",
+    default=False,
+    help="reconfigure cmake",
+)
+args = parser.parse_args()
+
+
+class Lang(Enum):
+    CXX = 0
+    PY = 1
 
 
 def run(cmd: str) -> None:
@@ -14,59 +47,31 @@ def run(cmd: str) -> None:
         abort()
 
 
+def get_lang(file: str) -> Lang:
+    if file.lower().endswith(".py"):
+        return Lang.PY
+    else:
+        return Lang.CXX
+
+
 def rm_extension(file: str) -> str:
-    if file.lower().endswith((".cpp", "cxx", "c++", ".cc")):
+    if file.find(".") != -1:
         return path.splitext(file)[0]
     else:
         return file
 
 
-def signal_handler(sig, frame) -> None:
-    exit(1)
+match get_lang(args.target):
+    case Lang.PY:
+        run(f"{"time " if args.benchmark else ""}python3 {args.target}")
 
+    case Lang.CXX:
+        if path.isdir("build/") is False or args.reconfigure is True:
+            build_type = "Release" if args.release else "Debug"
+            run(f"cmake -B build/ -DCMAKE_BUILD_TYPE={build_type}")
+        target = rm_extension(args.target)
+        run(f"cmake --build build --parallel -t {target}")
+        run(f"{"time " if args.benchmark else ""}build/{target}")
 
-# Register the signal handler
-signal.signal(signal.SIGINT, signal_handler)
-
-parser = argparse.ArgumentParser(prog="run")
-parser.add_argument(
-    "-t",
-    "--target",
-    default="",
-    help="target to build and execute",
-)
-parser.add_argument(
-    "-b",
-    "--benchmark",
-    action="store_true",
-    default=False,
-    help="time execution",
-)
-parser.add_argument(
-    "-r",
-    "--release",
-    action="store_true",
-    default=False,
-    help="release build",
-)
-parser.add_argument(
-    "-c",
-    "--clean",
-    action="store_true",
-    default=False,
-    help="build from scratch",
-)
-args = parser.parse_args()
-
-if args.clean and path.isdir("build/"):
-    run("rm build/ -rf")
-
-if path.isdir("build/") is False:
-    build_type = "Release" if args.release else "Debug"
-    run(f"cmake -B build/ -DCMAKE_BUILD_TYPE={build_type}")
-
-target = rm_extension(args.target) if args.target != "" else ""
-
-run(f"cmake --build build --parallel {f"-t {target}" if target != "" else ""}")
-if target != "":
-    run(f"{"time " if args.benchmark else ""}build/{target}")
+    case _:
+        exit(1)
