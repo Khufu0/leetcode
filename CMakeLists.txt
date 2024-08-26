@@ -31,6 +31,7 @@ add_executable(monotonicArray896 monotonicArray896.cpp)
 add_executable(romanToInt13 romanToInt13.cpp)
 add_executable(lengthOfLastWord58 lengthOfLastWord58.cpp)
 add_executable(toLower709 toLower709.cpp)
+add_executable(baseball682 baseball682.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)

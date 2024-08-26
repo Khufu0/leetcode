@@ -72,6 +72,3 @@ match get_lang(args.target):
         target = rm_extension(args.target)
         run(f"cmake --build build --parallel -t {target}")
         run(f"{"time " if args.benchmark else ""}build/{target}")
-
-    case _:
-        exit(1)
