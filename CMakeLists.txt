@@ -35,6 +35,8 @@ add_executable(baseball682 baseball682.cpp)
 add_executable(robot657 robot657.cpp)
 add_executable(ticTacToe1275 ticTacToe1275.cpp)
 add_executable(robot1041 robot1041.cpp)
+add_executable(wealth1672 wealth1672.cpp)
+add_executable(diagonalSum1572 diagonalSum1572.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)

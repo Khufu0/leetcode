@@ -31,6 +31,13 @@ parser.add_argument(
     default=False,
     help="reconfigure cmake",
 )
+parser.add_argument(
+    "-c",
+    "--clean",
+    action="store_true",
+    default=False,
+    help="clean cmake build",
+)
 args = parser.parse_args()
 
 
@@ -66,6 +73,8 @@ match get_lang(args.target):
         run(f"{"time " if args.benchmark else ""}python3 {args.target}")
 
     case Lang.CXX:
+        if args.clean is True:
+            run("rm build -rf")
         if path.isdir("build/") is False or args.reconfigure is True:
             build_type = "Release" if args.release else "Debug"
             run(f"cmake -B build/ -DCMAKE_BUILD_TYPE={build_type}")
