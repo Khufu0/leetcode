@@ -63,6 +63,14 @@
       "program": "${workspaceFolder}/build/baseball682",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "spiralMatrix54",
+      "program": "${workspaceFolder}/build/spiralMatrix54",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
