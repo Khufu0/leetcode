@@ -40,6 +40,8 @@ add_executable(diagonalSum1572 diagonalSum1572.cpp)
 add_executable(spiralMatrix54 spiralMatrix54.cpp)
 add_executable(zeroMatrix73 zeroMatrix73.cpp)
 add_executable(odd1523 odd1523.cpp)
+add_executable(salary1491 salary1491.cpp)
+add_executable(lemonade860 lemonade860.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)

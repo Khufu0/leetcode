@@ -71,6 +71,14 @@
       "program": "${workspaceFolder}/build/spiralMatrix54",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "lemonade860",
+      "program": "${workspaceFolder}/build/lemonade860",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
