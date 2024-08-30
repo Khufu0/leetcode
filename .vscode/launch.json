@@ -79,6 +79,14 @@
       "program": "${workspaceFolder}/build/lemonade860",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "lpt976",
+      "program": "${workspaceFolder}/build/lpt976",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
