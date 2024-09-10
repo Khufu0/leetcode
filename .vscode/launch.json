@@ -87,6 +87,46 @@
       "program": "${workspaceFolder}/build/lpt976",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "binary67",
+      "program": "${workspaceFolder}/build/binary67",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "add415",
+      "program": "${workspaceFolder}/build/add415",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "multiply43",
+      "program": "${workspaceFolder}/build/multiply43",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "merge21",
+      "program": "${workspaceFolder}/build/merge21",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "reverseList206",
+      "program": "${workspaceFolder}/build/reverseList206",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

@@ -1,20 +1,25 @@
 #include <algorithm>
+#include <bits/stdc++.h>
 #include <iostream>
+#include <tuple>
 #include <vector>
 
 class Solution {
-public:
-  double findMedianSortedArrays(std::vector<int> &nums1, std::vector<int> &nums2)
+  std::tuple<int, int> partition(std::vector<int> &a, std::vector<int> &b)
   {
-    nums1.insert(nums1.end(), nums2.begin(), nums2.end());
-    std::sort(nums1.begin(), nums1.end());
-    if (nums1.size() % 2 != 0) {
-      return nums1.at(nums1.size() / 2);
-    }
-    else {
-      return ((nums1.at(nums1.size() / 2)) + (nums1.at((nums1.size() / 2) - 1))) /
-             2.0;
-    }
+    return {};
+  }
+
+public:
+  double findMedianSortedArrays(std::vector<int> &a, std::vector<int> &b)
+  {
+    if (a.size() > b.size()) std::swap(a, b);
+
+    bool odd = a.size() + b.size() % 2 != 0;
+    auto [la, lb] = partition(a, b);
+
+    if (odd) return std::min(a[la], a[la]);
+    else return (std::max(a[la], b[lb]) + std::min(a[la] + 1, b[lb + 1])) / 2.0;
   }
 };
 
@@ -33,3 +38,16 @@ int main()
 
   return 69 ^ 69;
 }
+
+// double findMedianSortedArrays(std::vector<int> &nums1, std::vector<int> &nums2)
+// {
+//   nums1.insert(nums1.end(), nums2.begin(), nums2.end());
+//   std::sort(nums1.begin(), nums1.end());
+//   if (nums1.size() % 2 != 0) {
+//     return nums1.at(nums1.size() / 2);
+//   }
+//   else {
+//     return ((nums1.at(nums1.size() / 2)) + (nums1.at((nums1.size() / 2) - 1))) /
+//            2.0;
+//   }
+// }

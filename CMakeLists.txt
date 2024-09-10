@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES GNU OR CMAKE_CXX_COMPILER_ID MATCHES Clang)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Wno-sign-compare")
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
   if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wnrvo")
   elseif(CMAKE_CXX_COMPILER_ID MATCHES Clang)
@@ -45,6 +45,12 @@ add_executable(lemonade860 lemonade860.cpp)
 add_executable(lpt976 lpt976.cpp)
 add_executable(line1232 line1232.cpp)#
 add_executable(median4 median4.cpp)#
+add_executable(binary67 binary67.cpp)
+add_executable(multiply43 multiply43.cpp)
+add_executable(add415 add415.cpp)
+add_executable(pow50 pow50.cpp)#
+add_executable(merge21 merge21.cpp)
+add_executable(reverseList206 reverseList206.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)

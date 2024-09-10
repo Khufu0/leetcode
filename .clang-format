@@ -1,8 +1,9 @@
 Language: Cpp
 Standard: c++20
-BasedOnStyle: LLVM
 ColumnLimit: 85
+BasedOnStyle: LLVM
 BreakBeforeBraces: Stroustrup
-AlwaysBreakTemplateDeclarations: Yes
 SeparateDefinitionBlocks: Always
+AlwaysBreakTemplateDeclarations: Yes
 AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
