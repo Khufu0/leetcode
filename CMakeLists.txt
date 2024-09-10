@@ -44,13 +44,13 @@ add_executable(salary1491 salary1491.cpp)
 add_executable(lemonade860 lemonade860.cpp)
 add_executable(lpt976 lpt976.cpp)
 add_executable(line1232 line1232.cpp)#
-add_executable(median4 median4.cpp)#
 add_executable(binary67 binary67.cpp)
 add_executable(multiply43 multiply43.cpp)
-add_executable(add415 add415.cpp)
 add_executable(pow50 pow50.cpp)#
 add_executable(merge21 merge21.cpp)
 add_executable(reverseList206 reverseList206.cpp)
+add_executable(add2 add2.cpp)
+add_executable(add445 add445.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)
@@ -59,3 +59,7 @@ add_executable(fooBar1115 fooBar1115.cpp)
 add_executable(zeroEvenOdd1116 zeroEvenOdd1116.cpp)
 add_executable(h2o1117 h2o1117.cpp)
 add_executable(diningPhilosophers1226 diningPhilosophers1226.cpp)#
+
+#
+add_executable(add415 add415.cpp)
+add_executable(median4 median4.cpp)#

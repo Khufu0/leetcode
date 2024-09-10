@@ -127,6 +127,14 @@
       "program": "${workspaceFolder}/build/reverseList206",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "add2",
+      "program": "${workspaceFolder}/build/add2",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
