@@ -51,6 +51,12 @@ add_executable(merge21 merge21.cpp)
 add_executable(reverseList206 reverseList206.cpp)
 add_executable(add2 add2.cpp)
 add_executable(add445 add445.cpp)
+add_executable(gcds1071 gcds1071.cpp)
+
+# leetcode 75
+add_executable(candy1431 candy1431.cpp)
+add_executable(flower605 flower605.cpp)
+add_executable(vowels345 vowels345.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)

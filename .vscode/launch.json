@@ -135,6 +135,22 @@
       "program": "${workspaceFolder}/build/add2",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "gcds1071",
+      "program": "${workspaceFolder}/build/gcds1071",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "vowels345",
+      "program": "${workspaceFolder}/build/vowels345",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
