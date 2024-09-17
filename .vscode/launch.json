@@ -159,6 +159,14 @@
       "program": "${workspaceFolder}/build/words151",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "product238",
+      "program": "${workspaceFolder}/build/product238",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
