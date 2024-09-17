@@ -151,6 +151,14 @@
       "program": "${workspaceFolder}/build/vowels345",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "words151",
+      "program": "${workspaceFolder}/build/words151",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

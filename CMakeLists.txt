@@ -57,6 +57,7 @@ add_executable(gcds1071 gcds1071.cpp)
 add_executable(candy1431 candy1431.cpp)
 add_executable(flower605 flower605.cpp)
 add_executable(vowels345 vowels345.cpp)
+add_executable(words151 words151.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)
