@@ -59,6 +59,9 @@ add_executable(flower605 flower605.cpp)
 add_executable(vowels345 vowels345.cpp)
 add_executable(words151 words151.cpp)
 add_executable(product238 product238.cpp)
+add_executable(triplet334 triplet334.cpp)
+add_executable(compression443 compression443.cpp)
+add_executable(subsequence392 subsequence392.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)
@@ -68,6 +71,6 @@ add_executable(zeroEvenOdd1116 zeroEvenOdd1116.cpp)
 add_executable(h2o1117 h2o1117.cpp)
 add_executable(diningPhilosophers1226 diningPhilosophers1226.cpp)#
 
-#
+# random
 add_executable(add415 add415.cpp)
 add_executable(median4 median4.cpp)#

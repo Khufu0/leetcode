@@ -167,6 +167,30 @@
       "program": "${workspaceFolder}/build/product238",
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "triplet334",
+      "program": "${workspaceFolder}/build/triplet334",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "compression443",
+      "program": "${workspaceFolder}/build/compression443",
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "subsequence392",
+      "program": "${workspaceFolder}/build/subsequence392",
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }

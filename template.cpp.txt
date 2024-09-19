@@ -1,0 +1,29 @@
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
+
+// #pragma GCC optimize("O3") // comment this line while debugging
+static const bool booster = []() {
+  std::ios_base::sync_with_stdio(false);
+  std::cin.tie(nullptr);
+  std::cout.tie(nullptr);
+  return true;
+}();
+
+class Solution {
+public:
+  bool template()
+  {
+    return true;
+  }
+};
+
+int main()
+{
+  Solution s;
+  std::cout << std::boolalpha;
+  std::cout << s.template() << std::endl;
+  std::cout << s.template() << std::endl;
+  return 0;
+}
