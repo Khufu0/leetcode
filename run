@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
 from enum import Enum
-import subprocess
-import argparse
+from subprocess import run, CalledProcessError
+from argparse import ArgumentParser
 from os import abort, path
 
-parser = argparse.ArgumentParser(prog="run")
+parser = ArgumentParser(prog="run")
 parser.add_argument(
     "target",
 )
@@ -43,22 +43,25 @@ args = parser.parse_args()
 
 class Lang(Enum):
     CXX = 0
-    PY = 1
+    JS = 1
+    PY = 2
 
 
 def run(cmd: str) -> None:
     try:
-        subprocess.run(cmd, shell=True, check=True)
-    except subprocess.CalledProcessError as e:
+        run(cmd, shell=True, check=True)
+    except CalledProcessError as e:
         print(f"{str(e)}")
         abort()
 
 
 def get_lang(file: str) -> Lang:
-    if file.lower().endswith(".py"):
+    ext = path.splitext(file)[1]
+    if ext == ".py":
         return Lang.PY
-    else:
-        return Lang.CXX
+    elif ext == ".js":
+        return Lang.JS
+    return Lang.CXX
 
 
 def rm_extension(file: str) -> str:
@@ -68,16 +71,22 @@ def rm_extension(file: str) -> str:
         return file
 
 
-match get_lang(args.target):
-    case Lang.PY:
-        run(f"{"time " if args.benchmark else ""}python3 {args.target}")
+def build_cpp(cmake_target: str) -> None:
+    if args.clean is True:
+        run("rm build -rf")
+    if path.isdir("build/") is False or args.reconfigure is True:
+        build_type = "Release" if args.release else "Debug"
+        run(f"cmake -B build/ -DCMAKE_BUILD_TYPE={build_type}")
+    run(f"cmake --build build --parallel -t {cmake_target}")
 
+
+time = f"{"time " if args.benchmark else ""}"
+match get_lang(args.target):
     case Lang.CXX:
-        if args.clean is True:
-            run("rm build -rf")
-        if path.isdir("build/") is False or args.reconfigure is True:
-            build_type = "Release" if args.release else "Debug"
-            run(f"cmake -B build/ -DCMAKE_BUILD_TYPE={build_type}")
-        target = rm_extension(args.target)
-        run(f"cmake --build build --parallel -t {target}")
-        run(f"{"time " if args.benchmark else ""}build/{target}")
+        cmake_target = rm_extension(args.target)
+        build_cpp(cmake_target)
+        run(f"{time}build/{cmake_target}")
+    case Lang.JS:
+        run(f"{time}node {args.target}")
+    case Lang.PY:
+        run(f"{time}python3 {args.target}")

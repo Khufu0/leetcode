@@ -11,19 +11,10 @@ static const bool booster = []() {
   return true;
 }();
 
-class Solution {
-public:
-  bool template()
-  {
-    return true;
-  }
-};
 
 int main()
 {
   Solution s;
-  std::cout << std::boolalpha;
-  std::cout << s.template() << std::endl;
-  std::cout << s.template() << std::endl;
+  std::cout << 69 << std::endl;
   return 0;
 }

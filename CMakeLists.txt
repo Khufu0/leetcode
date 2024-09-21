@@ -62,6 +62,7 @@ add_executable(product238 product238.cpp)
 add_executable(triplet334 triplet334.cpp)
 add_executable(compression443 compression443.cpp)
 add_executable(subsequence392 subsequence392.cpp)
+add_executable(kSumPairs1679 kSumPairs1679.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)

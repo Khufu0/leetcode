@@ -3,194 +3,20 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "fizzBuzz1195",
-      "program": "${workspaceFolder}/build/fizzBuzz1195",
+      "name": "lldb-currentFile",
+      "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
       "args": [],
       "cwd": "${workspaceFolder}"
     },
     {
-      "type": "lldb",
+      "name": "run",
+      "type": "debugpy",
       "request": "launch",
-      "name": "repeatedSubstring459",
-      "program": "${workspaceFolder}/build/repeatedSubstring459",
-      "args": [],
-      "cwd": "${workspaceFolder}"
+      "program": "run",
+      "args": [
+        "add2.cpp"
+      ],
+      "console": "integratedTerminal"
     },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "moveZeros283",
-      "program": "${workspaceFolder}/build/moveZeros283",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "plusOne66",
-      "program": "${workspaceFolder}/build/plusOne66",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "zeroEvenOdd1116",
-      "program": "${workspaceFolder}/build/zeroEvenOdd1116",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "arithmeticProgression1502",
-      "program": "${workspaceFolder}/build/arithmeticProgression1502",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "lengthOfLastWord58",
-      "program": "${workspaceFolder}/build/lengthOfLastWord58",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "baseball682",
-      "program": "${workspaceFolder}/build/baseball682",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "spiralMatrix54",
-      "program": "${workspaceFolder}/build/spiralMatrix54",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "lemonade860",
-      "program": "${workspaceFolder}/build/lemonade860",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "lpt976",
-      "program": "${workspaceFolder}/build/lpt976",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "binary67",
-      "program": "${workspaceFolder}/build/binary67",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "add415",
-      "program": "${workspaceFolder}/build/add415",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "multiply43",
-      "program": "${workspaceFolder}/build/multiply43",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "merge21",
-      "program": "${workspaceFolder}/build/merge21",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "reverseList206",
-      "program": "${workspaceFolder}/build/reverseList206",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "add2",
-      "program": "${workspaceFolder}/build/add2",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "gcds1071",
-      "program": "${workspaceFolder}/build/gcds1071",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "vowels345",
-      "program": "${workspaceFolder}/build/vowels345",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "words151",
-      "program": "${workspaceFolder}/build/words151",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "product238",
-      "program": "${workspaceFolder}/build/product238",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "triplet334",
-      "program": "${workspaceFolder}/build/triplet334",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "compression443",
-      "program": "${workspaceFolder}/build/compression443",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "subsequence392",
-      "program": "${workspaceFolder}/build/subsequence392",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    }
   ]
 }
