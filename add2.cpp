@@ -135,7 +135,7 @@ int main()
 
   return 69 ^ 69;
 }
-// A fuck around algo
+
 //   ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
 //   {
 //     std::function<uint64_t(ListNode * l, uint64_t d)> get_num;

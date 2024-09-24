@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 
-// fun fact: i wrote both solutions using my brain!.
 class Solution {
   bool vowel(char c)
   {

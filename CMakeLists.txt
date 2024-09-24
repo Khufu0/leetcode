@@ -63,6 +63,12 @@ add_executable(triplet334 triplet334.cpp)
 add_executable(compression443 compression443.cpp)
 add_executable(subsequence392 subsequence392.cpp)
 add_executable(kSumPairs1679 kSumPairs1679.cpp)
+add_executable(findMaxAverage643 findMaxAverage643.cpp)
+add_executable(vowels1456 vowels1456.cpp)
+add_executable(consecutiveOnes1004 consecutiveOnes1004.cpp)
+add_executable(longestSubArray1493 longestSubArray1493.cpp)
+add_executable(altitude1732 altitude1732.cpp)
+add_executable(pivotIndex724 pivotIndex724.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)
