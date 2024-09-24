@@ -1,20 +1,10 @@
 #include <algorithm>
 #include <iostream>
 #include <limits>
-#include <numbers>
 #include <numeric>
 #include <stdexcept>
+#include <string>
 #include <vector>
-
-// #pragma GCC optimize("O3") // comment this line while debugging
-namespace {
-static const bool __booster = []() {
-  std::ios::sync_with_stdio(false);
-  std::cin.tie(nullptr);
-  std::cout.tie(nullptr);
-  return true;
-}();
-} // namespace
 
 template <typename... T>
 void pln(T... args)
@@ -28,9 +18,22 @@ void test(bool cond)
   else throw std::runtime_error("Test Failed!!");
 }
 
+//----------------------------------------------------------------------------------
+// #pragma GCC optimize("O3") // comment this line while debugging
+namespace {
+static const bool __booster = []() {
+  std::ios::sync_with_stdio(false);
+  std::cin.tie(nullptr);
+  std::cout.tie(nullptr);
+  return true;
+}();
+} // namespace
+
 class Solution {
 public:
 };
+
+//----------------------------------------------------------------------------------
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
