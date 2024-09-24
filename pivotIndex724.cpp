@@ -1,16 +1,32 @@
 #include <algorithm>
 #include <iostream>
+#include <limits>
+#include <numbers>
 #include <numeric>
-#include <string>
+#include <stdexcept>
 #include <vector>
 
 // #pragma GCC optimize("O3") // comment this line while debugging
+namespace {
 static const bool __booster = []() {
-  std::ios_base::sync_with_stdio(false);
+  std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
   std::cout.tie(nullptr);
   return true;
 }();
+} // namespace
+
+template <typename... T>
+void pln(T... args)
+{
+  (std::cout << ... << args) << "\n";
+}
+
+void test(bool cond)
+{
+  if (cond) pln("Passed!!");
+  else throw std::runtime_error("Test Failed!!");
+}
 
 class Solution {
 public:
@@ -43,12 +59,12 @@ public:
   //   }
 };
 
-int main()
+int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
   Solution s;
   std::vector<int> v1 = {1, 7, 3, 6, 5, 6};
   std::vector<int> v2 = {1, 2, 3};
-  std::cout << s.pivotIndex(v1) << std::endl;
-  std::cout << s.pivotIndex(v2) << std::endl;
+  test(s.pivotIndex(v1) == 3);
+  test(s.pivotIndex(v2) == -1);
   return 0;
 }

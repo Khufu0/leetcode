@@ -1,20 +1,39 @@
 #include <algorithm>
 #include <iostream>
-#include <string>
+#include <limits>
+#include <numbers>
+#include <numeric>
+#include <stdexcept>
 #include <vector>
 
 // #pragma GCC optimize("O3") // comment this line while debugging
+namespace {
 static const bool __booster = []() {
-  std::ios_base::sync_with_stdio(false);
+  std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
   std::cout.tie(nullptr);
   return true;
 }();
+} // namespace
 
+template <typename... T>
+void pln(T... args)
+{
+  (std::cout << ... << args) << "\n";
+}
 
-int main()
+void test(bool cond)
+{
+  if (cond) pln("Passed!!");
+  else throw std::runtime_error("Test Failed!!");
+}
+
+class Solution {
+public:
+};
+
+int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
   Solution s;
-  std::cout << 69 << std::endl;
   return 0;
 }
