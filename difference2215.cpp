@@ -3,6 +3,7 @@
 #include <limits>
 #include <numeric>
 #include <string>
+#include <unordered_set>
 #include <vector>
 
 using std::string, std::vector, std::numeric_limits;
@@ -32,6 +33,19 @@ static const bool __booster = []() {
 
 class Solution {
 public:
+  vector<vector<int>> findDifference(vector<int> &nums1, vector<int> &nums2)
+  {
+    vector<vector<int>> res(2);
+    std::unordered_set<int> set1(nums1.begin(), nums1.end());
+    std::unordered_set<int> set2(nums2.begin(), nums2.end());
+    for (auto i : set1) {
+      if (!set2.contains(i)) res[0].push_back(i);
+    }
+    for (auto i : set2) {
+      if (!set1.contains(i)) res[1].push_back(i);
+    }
+    return res;
+  }
 };
 
 //----------------------------------------------------------------------------------

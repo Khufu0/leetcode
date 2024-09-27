@@ -1,7 +1,9 @@
 #include <algorithm>
 #include <iostream>
 #include <limits>
+#include <list>
 #include <numeric>
+#include <stack>
 #include <string>
 #include <vector>
 
@@ -32,13 +34,29 @@ static const bool __booster = []() {
 
 class Solution {
 public:
+  string removeStars(string s)
+  {
+    size_t n = s.size();
+    std::stack<char> chars;
+    for (size_t i = 0; i < n; i++) {
+      if (s[i] == '*') chars.pop();
+      else chars.push(s[i]);
+    }
+    string res;
+    while (!chars.empty()) {
+      res += chars.top();
+      chars.pop();
+    }
+    std::reverse(res.begin(), res.end());
+    return res;
+  }
 };
 
 //----------------------------------------------------------------------------------
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
-  //   Solution s;
-  pln("NO TESTS!");
+  Solution s;
+  test(s.removeStars("leet**cod*e") == "lecoe");
   return 0;
 }

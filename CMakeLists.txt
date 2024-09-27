@@ -69,6 +69,11 @@ add_executable(consecutiveOnes1004 consecutiveOnes1004.cpp)
 add_executable(longestSubArray1493 longestSubArray1493.cpp)
 add_executable(altitude1732 altitude1732.cpp)
 add_executable(pivotIndex724 pivotIndex724.cpp)
+add_executable(difference2215 difference2215.cpp)
+add_executable(occurrences1207 occurrences1207.cpp)
+add_executable(string1657 string1657.cpp)
+add_executable(equalPairs2352 equalPairs2352.cpp)
+add_executable(stars1390 stars1390.cpp)
 
 # Concurrency
 add_executable(fizzBuzz1195 fizzBuzz1195.cpp)
@@ -81,3 +86,4 @@ add_executable(diningPhilosophers1226 diningPhilosophers1226.cpp)#
 # random
 add_executable(add415 add415.cpp)
 add_executable(median4 median4.cpp)#
+add_executable(rope1578 rope1578.cpp)

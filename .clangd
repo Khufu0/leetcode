@@ -1,4 +1,7 @@
 CompileFlags:
-  Add: [ -Wno-unknown-warning-option, -Wno-sign-compare, -Wno-unknown-pragmas ]
+    Add: [-Wno-unknown-warning-option, -Wno-sign-compare, -Wno-unknown-pragmas]
 Diagnostics:
-  UnusedIncludes: None
+    UnusedIncludes: None
+    ClangTidy:
+        # Add:
+        Remove: misc-unused-using-decls

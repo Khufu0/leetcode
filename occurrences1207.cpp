@@ -1,8 +1,11 @@
 #include <algorithm>
 #include <iostream>
 #include <limits>
+#include <map>
 #include <numeric>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
 
 using std::string, std::vector, std::numeric_limits;
@@ -32,6 +35,20 @@ static const bool __booster = []() {
 
 class Solution {
 public:
+  bool uniqueOccurrences(vector<int> &arr)
+  {
+    //       num, occurrences
+    std::map<int, int> map;
+    for (int num : arr) {
+      map[num]++;
+    }
+    std::unordered_set<int> set;
+    for (auto [key, val] : map) {
+      if (set.contains(val)) return false;
+      set.insert(val);
+    }
+    return true;
+  }
 };
 
 //----------------------------------------------------------------------------------
