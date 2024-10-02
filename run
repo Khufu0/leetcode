@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from enum import Enum
+import os
 from subprocess import run, CalledProcessError
 from argparse import ArgumentParser
 from os import abort, path
@@ -8,8 +9,9 @@ from os import abort, path
 
 class Lang(Enum):
     CXX = 0
-    JS = 1
-    PY = 2
+    JAVA = 1
+    JS = 2
+    PY = 3
 
 
 def run_cmd(cmd: str) -> None:
@@ -26,6 +28,8 @@ def get_lang(file: str) -> Lang:
         return Lang.PY
     elif ext == ".js":
         return Lang.JS
+    elif ext == ".java":
+        return Lang.JAVA
     return Lang.CXX
 
 
@@ -36,13 +40,17 @@ def rm_extension(file: str) -> str:
         return file
 
 
-def build_cpp(cmake_target: str, release: bool, reconfigure: bool, clean: bool) -> None:
+def build_cpp(file: str, release: bool, clean: bool) -> str:
+    target = rm_extension(file)
     if clean is True:
         run_cmd("rm build -rf")
-    if path.isdir("build/") is False or reconfigure is True:
-        build_type = "Release" if release else "Debug"
-        run_cmd(f"cmake -B build/ -DCMAKE_BUILD_TYPE={build_type}")
-    run_cmd(f"cmake --build build --parallel -t {cmake_target}")
+    if not path.isdir("build/"):
+        run_cmd("mkdir build/")
+    args = f"{"-O2" if release else "-g"} -Wall -Wextra -Wpedantic"
+    compiler = os.getenv("CXX")
+    compiler = "g++" if compiler is None else compiler
+    run_cmd(f"{compiler} {file} -o build/{target} {args}")
+    return target
 
 
 parser = ArgumentParser(prog="runner")
@@ -65,13 +73,6 @@ parser.add_argument(
     help="cmake release build",
 )
 parser.add_argument(
-    "-r",
-    "--reconfigure",
-    action="store_true",
-    default=False,
-    help="reconfigure cmake",
-)
-parser.add_argument(
     "-c",
     "--clean",
     action="store_true",
@@ -83,9 +84,10 @@ args = parser.parse_args()
 time = f"{"time " if args.benchmark else ""}"
 match get_lang(args.target):
     case Lang.CXX:
-        cmake_target = rm_extension(args.target)
-        build_cpp(cmake_target, args.release, args.reconfigure, args.clean)
-        run_cmd(f"{time}build/{cmake_target}")
+        target = build_cpp(args.target, args.release, args.clean)
+        run_cmd(f"{time}build/{target}")
+    case Lang.JAVA:
+        run_cmd(f"{time}java {args.target}")
     case Lang.JS:
         run_cmd(f"{time}node {args.target}")
     case Lang.PY:

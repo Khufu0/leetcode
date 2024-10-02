@@ -1,6 +1,13 @@
 {
   "configurations": [
     {
+      "type": "java",
+      "name": "decode394",
+      "request": "launch",
+      "mainClass": "decode394",
+      "projectName": "leetcode_9dc7a11f"
+    },
+    {
       "type": "lldb",
       "request": "launch",
       "name": "lldb-currentFile",
@@ -17,6 +24,6 @@
         "add2.cpp"
       ],
       "console": "integratedTerminal"
-    },
+    }
   ]
 }

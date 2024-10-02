@@ -63,3 +63,6 @@
 | 1657 | [string1657.cpp](string1657.cpp)                               |
 | 2352 | [equalPairs2352.cpp](equalPairs2352.cpp)                       |
 | 2390 | [stars1390.cpp](stars1390.cpp)                                 |
+| 735  | [asteriod735.cpp](asteriod735.cpp)                             |
+| 394  | [decode394.cpp](decode394.cpp)                                 |
+| 933  | [recentCall933.java](recentCall933.java)                       |

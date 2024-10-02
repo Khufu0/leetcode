@@ -34,15 +34,20 @@ static const bool __booster = []() {
 
 class Solution {
 public:
-  string removeStars(string s)
+  vector<int> asteroidCollision(vector<int> &a)
   {
-    size_t n = s.size();
-    std::deque<char> chars;
-    for (size_t i = 0; i < n; i++) {
-      if (s[i] == '*') chars.pop_back();
-      else chars.push_back(s[i]);
+    std::vector<int> res = {a.front()};
+    for (size_t i = 1; i < a.size(); i++) {
+      if (a[i] > 0) res.push_back(a[i]);
+      else {
+        while (!res.empty() && res.back() > 0 && res.back() < std::abs(a[i]))
+          res.pop_back();
+
+        if (res.empty() || res.back() < 0) res.push_back(a[i]);
+        else if (res.back() == std::abs(a[i])) res.pop_back();
+      }
     }
-    return {chars.begin(), chars.end()};
+    return res;
   }
 };
 
@@ -51,6 +56,9 @@ public:
 int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
   Solution s;
-  test(s.removeStars("leet**cod*e") == "lecoe");
+  vector v1 = {5, 10, -5};
+  vector v2 = {8, -8};
+  test(s.asteroidCollision(v1) == vector{5, 10});
+  test(s.asteroidCollision(v2) == vector<int>{});
   return 0;
 }
