@@ -66,10 +66,8 @@ public:
     ListNode dum;
     ListNode *last = &dum;
     while (!pq.empty()) {
-      ListNode *temp = pq.top();
-      last->next = temp;
-      last = last->next;
-      if (temp->next) pq.push(temp->next);
+      last = last->next = pq.top();
+      if (last->next) pq.push(last->next);
       pq.pop();
     }
     return dum.next;

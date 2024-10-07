@@ -75,3 +75,6 @@
 | 872  | [leaf872.cpp](leaf872.cpp)                                                          |
 | 23   | [merge23.cpp](merge23.cpp)                                                          |
 | 506  | [rank506.cpp](rank506.cpp)                                                          |
+| 1448 | [goodNodes1448.cpp](goodNodes1448.cpp)                                              |
+| 112  | [pathSum112.cpp](pathSum112.cpp)                                                    |
+| 437  | [pathSum437.cpp](pathSum437.cpp)                                                    |
