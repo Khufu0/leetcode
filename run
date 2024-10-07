@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
 from enum import Enum
-import os
 from subprocess import run, CalledProcessError
 from argparse import ArgumentParser
-from os import abort, path
+from os import abort, getenv, path
 
 
 class Lang(Enum):
@@ -47,8 +46,8 @@ def build_cpp(file: str, release: bool, clean: bool) -> str:
     if not path.isdir("build/"):
         run_cmd("mkdir build/")
     args = f"{"-O2" if release else "-g"} -Wall -Wextra -Wpedantic"
-    compiler = os.getenv("CXX")
-    compiler = "g++" if compiler is None else compiler
+    compiler = getenv("CXX")
+    compiler = "g++" if compiler is None else compiler  # cvss 6.9
     run_cmd(f"{compiler} {file} -o build/{target} {args}")
     return target
 

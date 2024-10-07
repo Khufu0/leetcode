@@ -1,5 +1,3 @@
-import java.util.Vector;
-
 public class twinSum2130 {
     public class ListNode {
         int val;

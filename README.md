@@ -71,3 +71,7 @@
 | 328  | [evenOdd328.java](evenOdd328.java)                                                  |
 | 2130 | [twinSum2130.java](twinSum2130.java)                                                |
 | 876  | [middleNode876.cpp](middleNode876.cpp)                                              |
+| 104  | [depth104.cpp](depth104.cpp)                                                        |
+| 872  | [leaf872.cpp](leaf872.cpp)                                                          |
+| 23   | [merge23.cpp](merge23.cpp)                                                          |
+| 506  | [rank506.cpp](rank506.cpp)                                                          |

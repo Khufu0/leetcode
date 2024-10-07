@@ -1,16 +1,10 @@
-#include <algorithm>
-#include <iostream>
-#include <limits>
-#include <numeric>
-#include <string>
-#include <vector>
-
-using std::string, std::vector, std::numeric_limits;
+#include <bits/stdc++.h>
+using namespace std;
 
 template <typename... T>
 void pln(T... args)
 {
-  (std::cout << ... << args) << "\n";
+  (cout << ... << args) << "\n";
 }
 
 void test(bool cond)
@@ -20,12 +14,12 @@ void test(bool cond)
 }
 
 //----------------------------------------------------------------------------------
-// #pragma GCC optimize("O3") // comment this line while debugging
+// #pragma GCC optimize("O3")
 namespace {
-static const bool __booster = []() {
-  std::ios::sync_with_stdio(false);
-  std::cin.tie(nullptr);
-  std::cout.tie(nullptr);
+static const bool __booster = [] {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+  cout.tie(nullptr);
   return true;
 }();
 } // namespace
