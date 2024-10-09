@@ -78,3 +78,7 @@
 | 1448 | [goodNodes1448.cpp](goodNodes1448.cpp)                                              |
 | 112  | [pathSum112.cpp](pathSum112.cpp)                                                    |
 | 437  | [pathSum437.cpp](pathSum437.cpp)                                                    |
+| 1372 | [zigZag1372.cpp](zigZag1372.cpp)                                                    |
+| 236  | [lca236.cpp](lca236.cpp)                                                            |
+| 199  | [rightView199.cpp](rightView199.cpp)                                                |
+| 1161 | [levelSum1161.cpp](levelSum1161.cpp)                                                |
