@@ -45,7 +45,7 @@ def build_cpp(file: str, release: bool, clean: bool) -> str:
         run_cmd("rm build -rf")
     if not path.isdir("build/"):
         run_cmd("mkdir build/")
-    args = f"{"-O2" if release else "-g"} -Wall -Wextra -Wpedantic"
+    args = f"{"-O2" if release else "-g"} -Wall -Wextra -Wpedantic -std=c++20"
     compiler = getenv("CXX")
     compiler = "g++" if compiler is None else compiler  # cvss 6.9
     run_cmd(f"{compiler} {file} -o build/{target} {args}")

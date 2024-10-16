@@ -4,7 +4,7 @@ using namespace std;
 template <typename... T>
 void pln(T... args)
 {
-  (cout << ... << args) << '\n';
+  (cout << ... << args) << "\n";
 }
 
 void test(bool cond)
@@ -24,7 +24,35 @@ static const bool __booster = [] {
 } // namespace
 
 class Solution {
+  vector<string> res;
+  vector<char> curStr;
+  int n;
+
+  void backtrack(int open, int close)
+  {
+    if (open == n && close == n) {
+      res.push_back({curStr.begin(), curStr.end()});
+      return;
+    }
+    if (open < n) {
+      curStr.push_back('(');
+      backtrack(open + 1, close);
+      curStr.pop_back();
+    }
+    if (close < open) {
+      curStr.push_back(')');
+      backtrack(open, close + 1);
+      curStr.pop_back();
+    }
+  }
+
 public:
+  vector<string> generateParenthesis(int p)
+  {
+    n = p;
+    backtrack(0, 0);
+    return res;
+  }
 };
 
 //----------------------------------------------------------------------------------

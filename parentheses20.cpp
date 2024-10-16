@@ -4,7 +4,7 @@ using namespace std;
 template <typename... T>
 void pln(T... args)
 {
-  (cout << ... << args) << '\n';
+  (cout << ... << args) << "\n";
 }
 
 void test(bool cond)
@@ -14,6 +14,7 @@ void test(bool cond)
 }
 
 //----------------------------------------------------------------------------------
+// #pragma GCC optimize("O3")
 namespace {
 static const bool __booster = [] {
   ios::sync_with_stdio(false);
@@ -25,6 +26,34 @@ static const bool __booster = [] {
 
 class Solution {
 public:
+  char pq(char c)
+  {
+    switch (c) {
+    case ')':
+      return '(';
+    case '}':
+      return '{';
+    case ']':
+      return '[';
+    }
+    return '\0';
+  }
+
+  bool isValid(string s)
+  {
+    stack<char> stack;
+    for (char c : s) {
+      char p = pq(c);
+      if (p == '\0') {
+        stack.push(c);
+      }
+      else {
+        if (stack.empty() || stack.top() != p) return false;
+        stack.pop();
+      }
+    }
+    return stack.empty();
+  }
 };
 
 //----------------------------------------------------------------------------------

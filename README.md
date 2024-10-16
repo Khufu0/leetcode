@@ -82,3 +82,13 @@
 | 236  | [lca236.cpp](lca236.cpp)                                                            |
 | 199  | [rightView199.cpp](rightView199.cpp)                                                |
 | 1161 | [levelSum1161.cpp](levelSum1161.cpp)                                                |
+| 700  | [searchBST700.java](searchBST700.java)                                              |
+| 450  | [deleteNode450.cpp](deleteNode450.cpp)                                              |
+| 20   | [parentheses20.cpp](parentheses20.cpp)                                              |
+| 155  | [minStack155.cpp](minStack155.cpp)                                                  |
+| 150  | [rpn150.cpp](rpn150.cpp)                                                            |
+| 912  | [sort912.cpp](sort912.cpp)                                                          |
+| 167  | [twoSum167.cpp](twoSum167.cpp)                                                      |
+| 15   | [threeSum15.cpp](threeSum15.cpp)                                                    |
+| 22   | [parentheses22.cpp](parentheses22.cpp)                                              |
+| 42   | [water42.cpp](water42.cpp)                                                          |
