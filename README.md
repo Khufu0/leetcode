@@ -1,3 +1,5 @@
+[leetcode profile](https://leetcode.com/u/khufu1/)
+
 | #    | Solution                                                                            |
 | ---- | ----------------------------------------------------------------------------------- |
 | 1768 | [mergeAlternatively1768.cpp](mergeAlternatively1768.cpp)                            |
@@ -91,4 +93,8 @@
 | 167  | [twoSum167.cpp](twoSum167.cpp)                                                      |
 | 15   | [threeSum15.cpp](threeSum15.cpp)                                                    |
 | 22   | [parentheses22.cpp](parentheses22.cpp)                                              |
+| 11   | [water11.js](water11.js)                                                            |
 | 42   | [water42.cpp](water42.cpp)                                                          |
+| 739  | [temperature739.cpp](temperature739.cpp)                                            |
+| 841  | [rooms841.cpp](rooms841.cpp) [rooms841.java](rooms841.java)                         |
+| 547  | [provinces547.cpp](provinces547.cpp)                                                |
