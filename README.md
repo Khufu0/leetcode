@@ -102,5 +102,8 @@
 | 2336 | [infiniteSet2336.cpp](infiniteSet2336.cpp) [infiniteSet2336.java](infiniteSet2336.java) |
 | 2542 | [maxScore2542.cpp \*](maxScore2542.cpp)                                                 |
 | 1383 | [maxPerformance1383.cpp \*](maxPerformance1383.cpp)                                     |
-| 2462 | [kWorkers2462.java ](kWorkers2462.java)                                                 |
-| 374  | [guess374.cpp ](guess374.cpp)                                                           |
+| 2462 | [kWorkers2462.java](kWorkers2462.java)                                                  |
+| 374  | [guess374.cpp](guess374.cpp)                                                            |
+| 17   | [combination17.cpp](combination17.cpp)                                                  |
+| 338  | [countBits338.cpp](countBits338.cpp)                                                    |
+| 901  | [stockSpan901.java](stockSpan901.java)                                                  |

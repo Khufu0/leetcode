@@ -1,29 +1,34 @@
 {
-  "configurations": [
-    {
-      "type": "java",
-      "name": "decode394",
-      "request": "launch",
-      "mainClass": "decode394",
-      "projectName": "leetcode_9dc7a11f"
-    },
-    {
-      "type": "lldb",
-      "request": "launch",
-      "name": "lldb-currentFile",
-      "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
-      "args": [],
-      "cwd": "${workspaceFolder}"
-    },
-    {
-      "name": "run",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "run",
-      "args": [
-        "add2.cpp"
-      ],
-      "console": "integratedTerminal"
-    }
-  ]
+	"configurations": [
+		{
+			"type": "java",
+			"name": "stockSpan901",
+			"request": "launch",
+			"mainClass": "stockSpan901",
+			"projectName": "leetcode_52614725"
+		},
+		{
+			"type": "java",
+			"name": "decode394",
+			"request": "launch",
+			"mainClass": "decode394",
+			"projectName": "leetcode_9dc7a11f"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "lldb-currentFile",
+			"program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"name": "run",
+			"type": "debugpy",
+			"request": "launch",
+			"program": "run",
+			"args": ["add2.cpp"],
+			"console": "integratedTerminal"
+		}
+	]
 }
