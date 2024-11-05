@@ -107,3 +107,8 @@
 | 17   | [combination17.cpp](combination17.cpp)                                                  |
 | 338  | [countBits338.cpp](countBits338.cpp)                                                    |
 | 901  | [stockSpan901.java](stockSpan901.java)                                                  |
+| 136  | [singleNum136.cpp](singleNum136.cpp)                                                    |
+| 39   | [combination39.cpp](combination39.cpp)                                                  |
+| 216  | [combination216.cpp](combination216.cpp)                                                |
+| 46   | [permutation46.cpp](permutation46.cpp)                                                  |
+| 78   | [subsets78.cpp](subsets78.cpp)                                                          |
