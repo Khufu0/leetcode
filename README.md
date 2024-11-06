@@ -112,3 +112,6 @@
 | 216  | [combination216.cpp](combination216.cpp)                                                |
 | 46   | [permutation46.cpp](permutation46.cpp)                                                  |
 | 78   | [subsets78.cpp](subsets78.cpp)                                                          |
+| 79   | [word79.cpp](word79.cpp)                                                                |
+| 347  | [kFrequent347.cpp](kFrequent347.cpp)                                                    |
+| 131  | [partitioning131.cpp](partitioning131.cpp)                                              |
