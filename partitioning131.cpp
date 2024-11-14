@@ -43,7 +43,7 @@ class Solution {
     }
     for (int j = i; j < s.size(); j++) {
       if (palindrome(s, i, j)) {
-        part.emplace_back(s.substr(i, j + 1));
+        part.emplace_back(s.substr(i, j - i + 1));
         backtrack(s, part, j + 1);
         part.pop_back();
       }
@@ -63,7 +63,12 @@ public:
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
-  //   Solution s;
-  pln("NO TESTS!");
+  Solution s;
+  for (auto &v : s.partition("aabbb")) {
+    for (auto &p : v) {
+      cout << p << ' ';
+    }
+    pln();
+  }
   return 0;
 }

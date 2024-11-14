@@ -115,3 +115,11 @@
 | 79   | [word79.cpp](word79.cpp)                                                                |
 | 347  | [kFrequent347.cpp](kFrequent347.cpp)                                                    |
 | 131  | [partitioning131.cpp](partitioning131.cpp)                                              |
+| 1318 | [minFlips1318.cpp](minFlips1318.cpp)                                                    |
+| 1466 | [cityZero1466.cpp](cityZero1466.cpp)                                                    |
+| 399  | [division399.js \*](division399.js)                                                     |
+| 1137 | [tribonacci1137.js](tribonacci1137.js)                                                  |
+| 746  | [stairs746.js](stairs746.js)                                                            |
+| 198  | [houseRobber198.js](houseRobber198.js)                                                  |
+| 790  | [domino790.js](domino790.js)                                                            |
+| 77   | [combinations77.js](combinations77.js)                                                  |
