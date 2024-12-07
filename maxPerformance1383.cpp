@@ -44,14 +44,14 @@ public:
     priority_queue<int, vector<int>, greater<int>> pq; // min heap for Data.s
     long long sum = 0;
     long long res = 0;
-    for (auto &d : v) {
-      pq.push(d.s);
-      sum += d.s;
+    for (auto &[s, e] : v) {
+      pq.push(s);
+      sum += s;
       if (pq.size() > k) {
         sum -= pq.top();
         pq.pop();
       }
-      if (pq.size() <= k) res = max(res, sum * d.e);
+      if (pq.size() <= k) res = max(res, sum * e);
     }
     return res % static_cast<long long>(pow(10, 9) + 7);
   }

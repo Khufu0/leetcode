@@ -25,36 +25,37 @@ static const bool __booster = [] {
 
 class Solution {
   struct Data {
-    int val;
-    int min;
+    double ratio;
+    int quality;
 
     constexpr auto operator<=>(const Data &x) const noexcept
     {
-      return min <=> x.min;
+      return ratio <=> x.ratio;
     }
   };
 
 public:
-  long long maxScore(vector<int> &nums1, vector<int> &nums2, int k)
+  double mincostToHireWorkers(vector<int> &quality, vector<int> &wage, int k)
   {
-    size_t n = nums1.size();
-    vector<Data> v;
-    for (size_t i = 0; i < n; i++)
-      v.emplace_back(nums1[i], nums2[i]);
-    ranges::sort(v, greater<Data>()); // descending based on Data.min
-    priority_queue<int, vector<int>, greater<int>> pq; // min heap for Data.val
-    long long n1sum = 0;
-    long long res = 0;
-    for (auto &[val, min] : v) {
-      pq.push(val);
-      n1sum += val;
+    int n = quality.size();
+    vector<Data> data(n);
+    for (int i = 0; i < n; i++) {
+      data[i] = {wage[i] / double(quality[i]), quality[i]};
+    }
+    ranges::sort(data, less<Data>()); // sort by ratio asc
+    priority_queue<int> pq;           // max heap quality
+    double minCost = numeric_limits<double>::max();
+    int totalQuality = 0;
+    for (auto &d : data) {
+      pq.push(d.quality);
+      totalQuality += d.quality;
       if (pq.size() > k) {
-        n1sum -= pq.top();
+        totalQuality -= pq.top();
         pq.pop();
       }
-      if (pq.size() == k) res = max(res, n1sum * min);
+      if (pq.size() == k) minCost = min(minCost, totalQuality * d.ratio);
     }
-    return res;
+    return minCost;
   }
 };
 
@@ -62,9 +63,7 @@ public:
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char **argv)
 {
-  Solution s;
-  vector v1 = {1, 3, 3, 2};
-  vector v2 = {2, 1, 3, 4};
-  test(s.maxScore(v1, v2, 3) == 12);
+  //   Solution s;
+  pln("NO TESTS!");
   return 0;
 }
