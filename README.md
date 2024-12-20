@@ -131,3 +131,5 @@
 | 1975 | [matrix1975.js](matrix1975.js)                                                                |
 | 141  | [cycle141.cpp](cycle141.cpp)                                                                  |
 | 207  | [courseSchedule207.java](courseSchedule207.java) [courseSchedule207.js](courseSchedule207.js) |
+| 743  | [network743.cpp](network743.cpp)                                                              |
+| 1584 | [mst1584.js](mst1584.js)                                                                      |
