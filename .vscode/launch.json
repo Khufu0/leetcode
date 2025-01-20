@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "exit1926",
+            "request": "launch",
+            "mainClass": "exit1926",
+            "projectName": "leetcode_52614725"
+        },
+        {
+            "type": "java",
             "name": "courseSchedule207",
             "request": "launch",
             "mainClass": "courseSchedule207",

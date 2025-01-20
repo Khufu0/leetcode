@@ -133,3 +133,5 @@
 | 207  | [courseSchedule207.java](courseSchedule207.java) [courseSchedule207.js](courseSchedule207.js) |
 | 743  | [network743.cpp](network743.cpp)                                                              |
 | 1584 | [mst1584.js](mst1584.js)                                                                      |
+| 1268 | [search1268.js](search1268.js) [search1268.cpp](search1268.cpp)                               |
+| 1926 | [exit1926.java](exit1926.java) [exit1926.js](exit1926.js)                                     |
