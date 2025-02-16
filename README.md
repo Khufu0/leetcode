@@ -135,3 +135,5 @@
 | 1584 | [mst1584.js](mst1584.js)                                                                      |
 | 1268 | [search1268.js](search1268.js) [search1268.cpp](search1268.cpp)                               |
 | 1926 | [exit1926.java](exit1926.java) [exit1926.js](exit1926.js)                                     |
+| 994  | [rotten994.py](rotten994.py)                                                                  |
+| 435  | [interval435.py](interval435.py)                                                              |
