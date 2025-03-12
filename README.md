@@ -137,3 +137,7 @@
 | 1926 | [exit1926.java](exit1926.java) [exit1926.js](exit1926.js)                                     |
 | 994  | [rotten994.py](rotten994.py)                                                                  |
 | 435  | [interval435.py](interval435.py)                                                              |
+| 452  | [interval452.py](interval452.py)                                                              |
+| 2300 | [pairs2300.py](pairs2300.py)                                                                  |
+| 162  | [peak162.py](peak162.py)                                                                      |
+| 875  | [koko875.py](koko875.py)                                                                      |
