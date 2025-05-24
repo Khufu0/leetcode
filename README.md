@@ -141,3 +141,9 @@
 | 2300 | [pairs2300.py](pairs2300.py)                                                                  |
 | 162  | [peak162.py](peak162.py)                                                                      |
 | 875  | [koko875.py](koko875.py)                                                                      |
+| 62   | [unique62.py](unique62.py)                                                                    |
+| 203  | [remove203.java](remove203.java)                                                              |
+| 1143 | [sequence1143.py](sequence1143.py)                                                            |
+| 322  | [change322.py](change322.py)                                                                  |
+| 714  | [profit714.py](profit714.py)                                                                  |
+| 72   | [distance72.py](distance72.py)                                                                |
